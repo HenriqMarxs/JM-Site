@@ -1,0 +1,52 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10% 10%;
+  color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 500px;
+  height: 500px;
+
+  background: url("/img/JM logo.svg") no-repeat center;
+  background-size: contain;
+
+  opacity: 0.15;
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.about h2 {
+  position: relative;
+  z-index: 1;
+}
+
+.imgAbout img { 
+  width: 350px;
+  max-width: 100%;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px; 
+  width: 100%;
+}
+
+.about::before {
+  background:
+    radial-gradient(circle, rgba(96,165,250,0.15), transparent),
+    url("/img/JM logo.svg")/1000px no-repeat;
+} 

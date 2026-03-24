@@ -1,0 +1,70 @@
+.values {
+  padding: 100px 10%;
+  text-align: center;
+}
+
+/* HEADER */
+.values-header h2 {
+  font-size: 2.5rem;
+  color: #f8fafc;
+  margin-bottom: 15px;
+}
+
+.values-header p {
+  color: #94a3b8;
+  max-width: 600px;
+  margin: 0 auto 60px;
+}
+
+/* GRID */
+.values-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD MODERNO */
+.value-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
+
+  padding: 30px;
+  border-radius: 16px;
+  width: 260px;
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* EFEITO GLOW */
+.value-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent, rgba(96,165,250,0.2), transparent);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.value-card:hover::before {
+  opacity: 1;
+}
+
+/* HOVER */
+.value-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(96,165,250,0.5);
+}
+
+/* TEXTO */
+.value-card h3 {
+  color: #60a5fa;
+  margin-bottom: 10px;
+}
+
+.value-card p {
+  color: #cbd5f5;
+}
