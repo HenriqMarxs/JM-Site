@@ -16,7 +16,7 @@ const values = [
 
 export function Values() {
   return (
-    <section className="values">
+    <section id = "values" className="values">
       <div className="values-header">
         <h2>Princípios que guiam nossa operação</h2>
         <p>

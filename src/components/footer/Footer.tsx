@@ -1,6 +1,7 @@
+import './style.css'
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white py-4 text-center">
+    <footer className="footerContent">
       <p>© {new Date().getFullYear()} JM Informática — Todos os direitos reservados.</p>
     </footer>
   );

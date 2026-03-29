@@ -1,0 +1,28 @@
+.stats {
+  position: relative;
+  padding: 3% 0%;
+  background: #02020f;
+  text-align: center;
+  overflow: hidden;
+}
+
+
+
+/* GRID */
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.stat-item h3 {
+  font-size: 4rem;
+  color: #4e7bf8;
+  margin-bottom: 5px;
+}
+
+.stat-item p {
+  color: #e5e7eb;
+  font-size: 1rem;
+}

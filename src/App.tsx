@@ -8,6 +8,7 @@ import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import './index.css';
 import './App.css';
+import Stats from "./components/contUp/Stats";
 
 export function App () {
   return (
@@ -16,6 +17,7 @@ export function App () {
       <WhatsAppButton />
       <main className="space-y-24">
         <Hero />
+        <Stats />
         <About />
         <Services />
         <Values />

@@ -1,0 +1,6 @@
+.footerContent {
+  background-color: #1f2937; /* Cor de fundo personalizada */
+  color: #ffffff; /* Cor do texto personalizada */
+  padding: 1rem; /* Espaçamento interno */
+  text-align: center; /* Centraliza o texto */
+}

@@ -3,11 +3,17 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 95vh;
+  padding: 100px 0%;
   color: #f8fafc;
   text-align: center;
   width: 100%;
   margin: 0;
+  background: linear-gradient(
+    180deg,
+    #020617,
+    #0f172a,
+    #020617
+  );
 }
 .services-container h2 {
   font-size: 2.5rem;
@@ -15,26 +21,112 @@
   color: #60a5fa;
 }
 .containerGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px;
 }
-.serviceItem{
-
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  width: 450px;
-  padding: 16px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.serviceItem {
+  flex: 0 0 80%;
+  max-width: 80%;              /* ESSENCIAL pro carrossel */
+  width: 100%;
+  transition: transform 0.3s;
+  padding: 20px;
+  border-radius: 16px;
   background: #131212;
   text-align: center;
-  transition: transform 0.3s;
+  scroll-snap-align: center;
 }
 
-.imgService{
+/* Hover moderno */
+.serviceItem:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 30px rgba(96,165,250,0.2);
+}
+.serviceItem:active {
+  transform: scale(0.97);
+}
+.imgService {
   width: 100%;
+  height: auto;
+  border-radius: 12px;
+
+  /* impede estourar o card */
+  object-fit: cover;
 }
 
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  border: none;
+  cursor: pointer;
+
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+
+  z-index: 10;
+  transition: 0.3s;
+}
+
+.carousel-btn:hover {
+  background: #60a5fa;
+}
+
+/* posição */
+.carousel-btn.left {
+  left: -15px;
+}
+
+.carousel-btn.right {
+  right: -15px;
+}
+
+@media (max-width: 1024px) {
+  .containerGrid {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+
+    scrollbar-width: none;
+  }
+
+  .containerGrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .serviceItem {
+    flex: 0 0 80%;
+    max-width: 80%;
+  }
+
+  .carousel-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+}
+
+@media (min-width: 1025px) {
+  .carousel-btn {
+    display: none;
+  }
+}
