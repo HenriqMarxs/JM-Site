@@ -1,12 +1,12 @@
 .stats {
   position: relative;
   padding: 3% 0%;
-  background: #02020f;
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
   text-align: center;
   overflow: hidden;
 }
-
-
 
 /* GRID */
 .stats-grid {
@@ -23,6 +23,6 @@
 }
 
 .stat-item p {
-  color: #e5e7eb;
+  color: var(--color-text);
   font-size: 1rem;
 }

@@ -3,109 +3,91 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 100px 0%;
-  color: #f8fafc;
+  padding: 100px 0;
   text-align: center;
   width: 100%;
   margin: 0;
-  background: linear-gradient(
-    180deg,
-    #020617,
-    #0f172a,
-    #020617
-  );
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
 }
+
 .services-container h2 {
   font-size: 2.5rem;
+  color: var(--color-title-contrast);
   margin-bottom: 50px;
-  color: #60a5fa;
 }
+
+/* ── DESKTOP: grid 3 colunas ── */
 .containerGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
   max-width: 1200px;
-}
-.serviceItem {
-  flex: 0 0 80%;
-  max-width: 80%;              /* ESSENCIAL pro carrossel */
-  width: 100%;
-  transition: transform 0.3s;
-  padding: 20px;
-  border-radius: 16px;
-  background: #131212;
-  text-align: center;
-  scroll-snap-align: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* Hover moderno */
+.serviceItem {
+  padding: 20px;
+  border-radius: 16px;
+  background: var(--color-card-bg);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
 .serviceItem:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(96,165,250,0.2);
+  box-shadow: 0 10px 30px rgba(96, 165, 250, 0.2);
 }
+
 .serviceItem:active {
   transform: scale(0.97);
 }
+
 .imgService {
   width: 100%;
   height: auto;
   border-radius: 12px;
-
-  /* impede estourar o card */
   object-fit: cover;
 }
 
+/* ── Wrapper ── */
 .carousel-wrapper {
-  position: relative;
   width: 100%;
   max-width: 1200px;
+  position: relative;
 }
+
+/* ── Botões: ocultos por padrão ── */
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-
-  border: none;
-  cursor: pointer;
-
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
-
-  z-index: 10;
-  transition: 0.3s;
+  display: none;
 }
 
-.carousel-btn:hover {
-  background: #60a5fa;
-}
-
-/* posição */
-.carousel-btn.left {
-  left: -15px;
-}
-
-.carousel-btn.right {
-  right: -15px;
-}
-
+/* ════════════════════════════════
+   MOBILE / TABLET
+   ════════════════════════════════ */
 @media (max-width: 1024px) {
+
+  .carousel-wrapper {
+    width: 100vw;
+    max-width: 100vw;
+    position: relative;
+  }
+
   .containerGrid {
     display: flex;
-    gap: 20px;
-    padding: 20px;
-    overflow-x: auto;
+    flex-direction: row;
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-
     -webkit-overflow-scrolling: touch;
-    touch-action: pan-x;
-
     scrollbar-width: none;
+    gap: 16px;
+    padding: 10px 10vw;
+    box-sizing: border-box;
+    max-width: 100%;
   }
 
   .containerGrid::-webkit-scrollbar {
@@ -113,20 +95,36 @@
   }
 
   .serviceItem {
-    flex: 0 0 80%;
-    max-width: 80%;
+    flex: 0 0 80vw;
+    width: 80vw;
+    max-width: 80vw;
+    scroll-snap-align: center;
+    box-sizing: border-box;
   }
 
   .carousel-btn {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.55);
+    color: white;
+    font-size: 14px;
+    z-index: 10;
+    transition: background 0.3s;
   }
-  
-}
 
-@media (min-width: 1025px) {
-  .carousel-btn {
-    display: none;
+  .carousel-btn:hover {
+    background: #60a5fa;
   }
+
+  .carousel-btn.left  { left:  8px; }
+  .carousel-btn.right { right: 8px; }
 }

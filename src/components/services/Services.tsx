@@ -8,10 +8,11 @@ const Services: React.FC = () => {
   const scroll = (direction: "left" | "right") => {
     if (!carouselRef.current) return;
 
-    const scrollAmount = carouselRef.current.offsetWidth * 0.8;
+    // Rola exatamente a largura de um card (80vw) + o gap (16px)
+    const cardWidth = window.innerWidth * 0.8 + 16;
 
     carouselRef.current.scrollBy({
-      left: direction === "left" ? -scrollAmount : scrollAmount,
+      left: direction === "left" ? -cardWidth : cardWidth,
       behavior: "smooth",
     });
   };
@@ -52,7 +53,7 @@ const Services: React.FC = () => {
         <div className="containerGrid" ref={carouselRef}>
           {services.map((service) => (
             <div key={service.id} className="serviceItem">
-              <img className="imgService" src={service.image} />
+              <img className="imgService" src={service.image} alt={service.title} />
               <h4>{service.title}</h4>
               <p>{service.description}</p>
             </div>

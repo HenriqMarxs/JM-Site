@@ -15,7 +15,7 @@ export function App () {
     <div className="font-sans text-gray-800">
       <Header />
       <WhatsAppButton />
-      <main className="space-y-24">
+      <main className="space-y-24">  
         <Hero />
         <Stats />
         <About />

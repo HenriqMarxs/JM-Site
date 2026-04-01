@@ -1,6 +1,6 @@
 .hero {
   position: relative;
-  height: 97vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
   display: grid;
@@ -42,23 +42,19 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 70px;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.9),
-    transparent
-  );
-
+  height: 100px;
+  background: var(--color-transition);
   pointer-events: none;
 }
 
 .scroll-arrow {
   position: absolute;
-  bottom: 20px;
+  height: 40px;
+  width: 40px;
+  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 2rem;
-  color: white;
+  color: var(--color-arrow);
   cursor: pointer;
   animation: bounce 1.5s infinite;
   z-index: 2;

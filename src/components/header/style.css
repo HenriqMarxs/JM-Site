@@ -129,6 +129,7 @@
 
   .nav-desktop {
     display: none;
+    align-items: center;
   }
 
   .hamburger {
@@ -147,4 +148,26 @@
   .container {
     height: 60px;
   }
+}
+
+.nav-mobile-close {
+  align-self: flex-end;
+  background: none;
+  border: 1.5px solid var(--color-border, rgba(255,255,255,0.2));
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: var(--color-text);
+  cursor: pointer;
+  margin-bottom: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+ 
+.nav-mobile-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(90deg);
 }

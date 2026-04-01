@@ -56,7 +56,6 @@ export default function Stats() {
 
   return (
     <section className="stats" ref={sectionRef}>
-      <div className="overlay-top"></div>
 
       <div className="stats-grid">
         <div className="stat-item">

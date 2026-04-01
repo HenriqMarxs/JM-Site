@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import './style.css'
 import logo from '/img/JM logo.svg';
+import { ThemeToggle } from "../themeButton/ThemeToggle";
 
 const Header: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // trava scroll quando menu abre
   useEffect(() => {
     document.body.style.overflow = menuOpen ? "hidden" : "auto";
   }, [menuOpen]);
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   return (
     <header className="header">
       <div className="container">
-        
+
         <div className="logo-section">
           <img src={logo} alt="JM Logo" className="logo" />
           <h1>Informática</h1>
@@ -25,13 +25,15 @@ const Header: React.FC = () => {
             <li><a href="#about">Sobre nós</a></li>
             <li><a href="#services">Serviços</a></li>
             <li><a href="#values">Valores</a></li>
+            <li><ThemeToggle /></li>
           </ul>
         </nav>
 
         {/* BOTÃO HAMBURGUER */}
-        <div 
+        <div
           className={`hamburger ${menuOpen ? "active" : ""}`}
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-label="Abrir menu"
         >
           <span></span>
           <span></span>
@@ -46,9 +48,20 @@ const Header: React.FC = () => {
 
       {/* MENU MOBILE */}
       <nav className={`nav-mobile ${menuOpen ? "open" : ""}`}>
-        <a href="#about" onClick={() => setMenuOpen(false)}>Sobre nós</a>
+
+        {/* BOTÃO FECHAR */}
+        <button
+          className="nav-mobile-close"
+          onClick={() => setMenuOpen(false)}
+          aria-label="Fechar menu"
+        >
+          ✕
+        </button>
+
+        <a href="#about"    onClick={() => setMenuOpen(false)}>Sobre nós</a>
         <a href="#services" onClick={() => setMenuOpen(false)}>Serviços</a>
-        <a href="#values" onClick={() => setMenuOpen(false)}>Valores</a>
+        <a href="#values"   onClick={() => setMenuOpen(false)}>Valores</a>
+        <ThemeToggle />
       </nav>
     </header>
   );
