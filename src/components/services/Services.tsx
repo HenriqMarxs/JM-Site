@@ -1,6 +1,9 @@
 import { useRef } from "react";
 import type { Service } from "../../types/service";
 import "./style.css";
+import operacaoTecnica from '/img/operacaoTecnica.png';
+import tecnicoJM from '/img/tecnicoJM.png';
+import sistemasEmpresariais from '/img/SistemaEmprearial.png'
 
 const Services: React.FC = () => {
   const carouselRef = useRef<HTMLDivElement | null>(null);
@@ -20,21 +23,21 @@ const Services: React.FC = () => {
   const services: Service[] = [
     {
       id: 1,
-      image: "../../../img/tecnicoJM.png",
+      image: tecnicoJM,
       title: "Execução Técnica Nacional",
       description:
         "Field Service, instalações, manutenção preventiva e corretiva com cobertura em todo o Brasil.",
     },
     {
       id: 2,
-      image: "../../../img/operacaoTecnica.png",
+      image: operacaoTecnica,
       title: "Operação Técnica Corporativa",
       description:
         "Gestão de chamados, controle operacional e acompanhamento técnico com responsabilidade contratual.",
     },
     {
       id: 3,
-      image: "../../../img/SistemaEmprearial.png",
+      image: sistemasEmpresariais,
       title: "Sistemas Empresariais",
       description:
         "Implantação, parametrização, treinamento e suporte de sistemas de gestão administrativa e financeira.",

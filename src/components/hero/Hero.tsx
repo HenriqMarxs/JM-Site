@@ -1,7 +1,7 @@
 import './style.css';
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
-
+import backgroundVideo from '/img/background.mp4';
 const Hero: React.FC = () => {
 const [showArrow, setShowArrow] = useState(true);
 
@@ -33,7 +33,7 @@ const [showArrow, setShowArrow] = useState(true);
         muted
         playsInline
       >
-        <source src="/img/background.mp4" type="video/mp4" />
+        <source src= {backgroundVideo} type="video/mp4" />
       </video>
 
       <div className="hero-content">
