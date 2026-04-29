@@ -58,8 +58,12 @@ JM-Site/
 │ ├── assets/
 │ └── styles/
 │
-├── index.html
-├── package.json
+├── context/
+│
+├── App.css
+├── App.tsx
+├── index.css
+├── main.tsx
 └── README.md
 ```
 ---
