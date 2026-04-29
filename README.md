@@ -79,20 +79,9 @@ Este projeto foi desenvolvido com foco em:
 
 ---
 
-## 📈 Possíveis Melhorias
-
-- Integração com backend (formulário funcional)  
-- SEO avançado  
-- Integração com APIs  
-- Animações mais avançadas  
-- Otimização de performance  
-
----
-
 ## 👨‍💻 Autor
 
-Desenvolvido por **Henrique Marques**  
-📌 Estudante de Análise e Desenvolvimento de Sistemas  
+Desenvolvido por **Henrique Marques**   
 📌 Foco em desenvolvimento web e aplicações modernas  
 
 ---
