@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+🚀 JM Site - Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste no desenvolvimento de uma landing page institucional voltada para apresentação de serviços de informática e tecnologia, com foco em conversão de visitantes em clientes.
 
-Currently, two official plugins are available:
+A aplicação foi desenvolvida de forma independente, com atenção à experiência do usuário (UX), responsividade e organização visual, simulando um cenário real de presença digital para negócios.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🌐 Acesse o Projeto
 
-## React Compiler
+👉 Deploy online:
+🔗 https://jm-site.onrender.com/
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+A página está publicada e acessível em ambiente de produção, permitindo visualizar o resultado final do projeto.
 
-## Expanding the ESLint configuration
+📌 Sobre o Projeto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+A landing page foi construída com o objetivo de:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Apresentar serviços de forma clara e objetiva
+Destacar identidade visual profissional
+Facilitar o contato com potenciais clientes
+Simular uma aplicação real para portfólio
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+O projeto segue o conceito de sites modernos, que utilizam estrutura enxuta e foco em conversão, comum em páginas institucionais atuais.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+🛠️ Tecnologias Utilizadas
+HTML5
+CSS3
+JavaScript
+React (se aplicável ao seu projeto)
+Vite (se aplicável)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Projetos desse tipo são geralmente compostos por arquivos estáticos (HTML, CSS e JS), o que permite fácil deploy e alta performance
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+🎯 Funcionalidades
+Layout moderno e responsivo
+Seções organizadas (Hero, Serviços, Contato, etc.)
+Navegação fluida
+Estrutura otimizada para apresentação comercial
+Design focado em usabilidade
+📁 Estrutura do Projeto
+JM-Site/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── assets/
+│   └── styles/
+│
+├── index.html
+├── package.json
+└── README.md
+🚀 Objetivo
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Este projeto foi desenvolvido com foco em:
+
+Portfólio profissional
+Demonstração de habilidades em front-end
+Simulação de projeto real para clientes
+Prática de deploy e publicação de aplicações web
+📈 Possíveis Melhorias
+Integração com backend (formulário funcional)
+SEO avançado
+Integração com APIs
+Animações mais avançadas
+Otimização de performance
+👨‍💻 Autor
+
+Desenvolvido por Henrique Marques
+📌 Estudante de Análise e Desenvolvimento de Sistemas
+📌 Foco em desenvolvimento web e aplicações modernas
