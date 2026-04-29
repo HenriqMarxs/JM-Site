@@ -49,6 +49,7 @@ O projeto segue o conceito de sites modernos, com **estrutura enxuta e foco em c
 ---
 
 ## 📁 Estrutura do Projeto
+```
 JM-Site/
 │
 ├── public/
@@ -61,8 +62,7 @@ JM-Site/
 ├── index.html
 ├── package.json
 └── README.md
-
-
+```
 ---
 
 ## 🚀 Objetivo
