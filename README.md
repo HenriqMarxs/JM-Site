@@ -55,7 +55,6 @@ JM-Site/
 ├── public/
 ├── src/
 │ ├── components/
-│ ├── pages/
 │ ├── assets/
 │ └── styles/
 │
